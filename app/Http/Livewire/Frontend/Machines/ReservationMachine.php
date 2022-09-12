@@ -177,9 +177,9 @@ class ReservationMachine extends Component
                 //$cell_obj['jour'] = date_format($day,"D");
 
                 foreach ($reservations as $reserv) {
-                    if ($reserv->date_seance == $day['date'] && $reserv->numero_seance == $time) {
+                    if ($reserv->date_seance == $day['date'] && $reserv->numero_seance == $time && $reserv->statut != 'annule') {
                         $cell_obj['disponible'] = false;
-                        $cell_obj['color'] = 'red';
+                        $cell_obj['color'] = $reserv->statut=='valide'?'red':'orange';
                         $cell_obj['time'] = $time;
                         $cell_obj['date'] = $day['date'];
                         //$cell_obj['jour'] = date_format($day,"D");

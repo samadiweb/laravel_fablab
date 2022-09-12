@@ -40,17 +40,17 @@
           </div>
           <div class="col-lg-4">
             @if(Route::has('login'))
-            @auth
-             <div text-lg-right top-right-bar mt-2 mt-lg-0>
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown">
-    Mon Compte ({{Auth::user()->nom}})
-    <span class="caret"></span>
-  </button>
-                  <!-- <a   class="nav-link dropdown-toggle" style="color:white"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenu {{Auth::user()->nom}} <i class="icofont-thin-down"></i></a> -->
+                    @auth
+                    <div text-lg-right top-right-bar mt-2 mt-lg-0>
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                       <!--  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown">
+            Mon Compte ({{Auth::user()->nom}})
+            <span class="caret"></span>
+          </button> -->
+                  <a href=""  class="nav-link dropdown-toggle" style="color:white"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenu <strong>{{Auth::user()->nom}}</strong> </a> 
                   <ul role="list" class="dropdown-menu" aria-labelledby="dropdown02">
-                    <li role="listitem" ><a class="dropdown-item" href="{{route('frontend.portfolios.edit')}}">Mon Profile</a></li>
+                    <li role="listitem" ><a class="dropdown-item" href="{{route('frontend.portfolios.edit')}}">Portefolio</a></li>
                     <li role="listitem" ><a class="dropdown-item" href="{{route('frontend.reservations')}}">Réservations</a></li>
                     <li role="listitem" ><a class="dropdown-item" href="{{route('frontend.home')}}">Formations</a></li>
                     @if(Auth::user()->user_type === 'admin')
@@ -152,9 +152,9 @@
             <p>Un Text</p>
 
             <ul class="list-inline footer-socials mt-4">
-              <li class="list-inline-item"><a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a></li>
-              <li class="list-inline-item"><a href="https://twitter.com/"><i class="icofont-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="https://www.linkedin.com//"><i class="icofont-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/Fablab-Cohabit-1713924472234837/"><i class="icofont-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/fablab-cohabit-707248179/?originalSubdomain=fr"><i class="icofont-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/fablabcohabit/?hl=en"><i class="icofont-instagram"></i></a></li>
             </ul>
           </div>
         </div>

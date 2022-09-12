@@ -92,7 +92,7 @@
     </div>
   </div>
 </section>
-<section class="cta-section ">
+<!-- <section class="cta-section ">
   <div class="container">
     <div class="cta position-relative">
       <div class="row">
@@ -128,7 +128,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- <section class="section service gray-bg">
   <div class="container">
     <div class="row justify-content-center">

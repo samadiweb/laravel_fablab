@@ -106,17 +106,17 @@
 
                                                 <div class="dropdown-menu" role="menu">
                                                     
-                                                    <a href=""  wire:click.prevent="validerInscription({{$item->id}})" class="dropdown-item"> <i class="fas fa-pencil-alt">
-                                                        </i>
+                                                    <a href=""  wire:click.prevent="validerInscription({{$item->id}})" class="dropdown-item"> 
+                                                    <i class="fas fa-check"></i>
                                                         Valider</a>
 
                                                     <a wire:click.prevent="annulerInscription({{$item->id}})" class="dropdown-item" href="#" onclick="confirm('Voulez Vous vraiment Annuler cet inscription ?')|| event.stopImmediatePropagation()" >
-                                                        <i class="fas fa-trash">
+                                                        <i class="fas fa-times-circle">
                                                         </i>
                                                         Annuler</a>
 
                                                         <a class="dropdown-item" href="#"  wire:click.prevent="initialiserInscription({{$item->id}})">
-                                                        <i class="fas fa-trash">
+                                                        <i class="fas fa-reply">
                                                         </i>
                                                         En Ettent</a>
 

@@ -26,7 +26,7 @@
 				<div class="section-title">
 					
 					<div class="divider mx-auto my-4"></div>
-					<p>Texte concernat les projets.</p>
+					<p>Nos Projets</p>
 				</div>
 			</div>
 		</div>
@@ -39,8 +39,8 @@
 					<a href=""> <img src="{{ asset('assets/images/projects') }}/{{$item->image}}" alt="" class="img-fluid w-100"></a>
 					<div class="content">
 						<h4 class="mt-4 mb-2 title-color">{{$item->titre}}</h4>
-						<p class="mb-4">{{$item->description}}</p>
-						<a href="#" class="read-more">Participer  <i class="icofont-simple-right ml-2"></i></a>
+						<p class="mb-2"><a href="{{$item->lien_wiki}}" target="_blank">Consulter le Wiki  <i class="icofont-simple-right ml-2"></i></a> </p>
+						<a href="#" class="btn btn-main-2 btn-round-full">Participer  </a>
 					</div>
 				</div>
 			</div>

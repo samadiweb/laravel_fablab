@@ -129,8 +129,8 @@
 					<div class="doctor-details mt-4 mt-lg-0">
 						<h2 class="text-md">{{$nom}}</h2>
 						<div class="divider my-4"></div>
-						<p>Texte descriptif</p>
-						<p>Pour plus de détails, consulter le wiki : <a href="{{$lien_wiki}}">{{$lien_wiki}}</a> </p>
+						<p>{{$description}}</p>
+						<p>Pour plus de détails, <a href="{{$lien_wiki}}">consulter le wiki.</a> </p>
 
 					</div>
 				</div>
@@ -155,9 +155,12 @@
 					</select>
 
 				</div>
-				<div class="col-lg-12 col-md-12 col-sm-12 mb-2">
+				<div class="col-lg-6 col-md-6 col-sm-6 mb-2">
 					Projet de réservation : <input wire:model="project" type="text" size="50">
 					@error('project') <span class="text-danger">{{ $message }}</span> @enderror
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 mb-2">
+				Notes : <input wire:model="notes_reservation" value="{{$notes_reservation}}" type="text" size="50">
 				</div>
 
 				<div class="col-lg-12 col-md-12 col-sm-12">
@@ -196,7 +199,7 @@
 										</td>
 										@endif
 									@else
-										<td style="background-color:{{$seance['color']}}" wire:click="selectSeance()">
+										<td style="background-color:{{$seance['color']}}" >
 											<center><strong>{{$seance['project']}}</strong> <br> {{$seance['user']}}</center>
 										</td>
 									@endif
@@ -208,10 +211,8 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="col-lg-12 col-md-12 col-sm-12 mb-2">
-					Notes : <input wire:model="notes_reservation" value="{{$notes_reservation}}" type="text" size="50">
-				</div>
-				<div class="col-lg-12 col-md-12 col-sm-12 mb-2">
+			
+				<div class="col-lg-12 col-md-12 col-sm-12 mt-2">
 					<button wire:click.prevent="reserverSeance" type="button" class="btn btn-info">Valider la réservation</button>
 				</div>
 				<div>

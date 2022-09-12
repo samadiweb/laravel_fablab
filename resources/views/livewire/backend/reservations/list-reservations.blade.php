@@ -32,10 +32,10 @@
                             <h3 class="card-title">Liste des Réservation</h3>
 
                             <div class="card-tools">
-                         
-                                <div class="input-group " >
 
-                                
+                                <div class="input-group ">
+
+
                                     <select class="form-control f" wire:click="changerMachine($event.target.value)">
                                         <option value="0">-- Tous les Machines --</option>
                                         @foreach($machines as $machine)
@@ -89,7 +89,7 @@
                                         <td>{{$item->project}}</td>
                                         <td>{{$item->date_seance}} / {{$item->numero_seance}}-{{$item->numero_seance + 1}}</td>
                                         <td>
-                                        @if ($item->statut=='attente')
+                                            @if ($item->statut=='attente')
                                             <span class="badge badge-warning">{{$item->statut}}</span>
                                             @else
                                             @if($item->statut=='valide')
@@ -107,19 +107,18 @@
                                                 <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">Actions </button>
 
                                                 <div class="dropdown-menu" role="menu">
-                                                   
-                                                    <a href="" wire:click.prevent="validerReservation({{$item->id}})" class="dropdown-item"> <i class="fas fa-pencil-alt">
-                                                        </i>
+
+                                                    <a href="" wire:click.prevent="validerReservation({{$item->id}})" class="dropdown-item">
+                                                         <i class="fas fa-check"></i>
+
                                                         Valider</a>
 
-                                                    <a class="dropdown-item" href="#" onclick="confirm('Voulez Vous vraiment Annuler cet reservation ?')|| event.stopImmediatePropagation()" wire:click.prevent="annulerReservation({{$item->id}})">
-                                                        <i class="fas fa-trash">
-                                                        </i>
-                                                        Annuler</a>
-                                                    <a class="dropdown-item" href="#"  wire:click.prevent="initialiserReservation({{$item->id}})">
-                                                        <i class="fas fa-trash">
-                                                        </i>
+                                                    <a class="dropdown-item" href="#" wire:click.prevent="initialiserReservation({{$item->id}})">
+                                                    <i class="fas fa-reply"></i>
                                                         En Ettent</a>
+                                                    <a class="dropdown-item" href="#" onclick="confirm('Voulez Vous vraiment Annuler cet reservation ?')|| event.stopImmediatePropagation()" wire:click.prevent="annulerReservation({{$item->id}})">
+                                                        <i class="fas fa-times-circle"></i>
+                                                        Annuler</a>
 
 
                                                 </div>
